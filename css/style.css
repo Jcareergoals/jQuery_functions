@@ -3,6 +3,9 @@
 	padding: 0px; 
 	font-family: "tahoma";
 }
+body {
+	background: linear-gradient(90deg, rgb(250,250,250), rgb(220,220,220), rgb(250,250,250));
+}
 
 #container {
 	background-color: lightgray; 
@@ -55,7 +58,7 @@ button, .function p {
 #rightbox {
 	height: 240px; 
 	width: 467px;  
-	background-color: gray; 
+	background: linear-gradient(220deg, gray, rgb(180,180,180), gray); 
 	opacity: .9;
 	position: fixed;
 	top: 100px; 
