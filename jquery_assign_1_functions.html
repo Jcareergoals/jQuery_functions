@@ -4,68 +4,74 @@
 	<title>JQuery Functions</title>
 	<meta charset="UTF-8">
 	<meta name="JQuery Assignment" content="This webpage contains some of the most commonly used jquery functions">
-	<meta http-equiv="refresh" content="">
-
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script type="text/javascript">
 			$(document).ready(function(){
-				// Add jquery here 
-
-				var i = 1; 				
-					// ---- add class ---- //				
+				var i = 1; 
+				var name = "";	
+			
 				$('#addClass button').click(function(){
-					$('#rightbox h1').css('color', 'blue')
-				});
-					// ---- after ---------//
+					$('#rightbox h1').css('color', 'blue');
+				});	
 				$('#after button').click(function(){
-					$('#rightbox h1').after('<p>boom!!!!<p>')
-				})
-					// ---- append --------//
-				$('#append button').click(function(){
-					$('#rightbox h1').append(" " + i)
-					i++
-				})
-					// ---- attr ----------//
+					$('#rightbox h1').after('<p>boom!!!!<p>');
+				})	
 				$('#attr button').click(function(){
+					var oldSrc = $('img').attr('src');
+					var altSrc = $('img').attr('altSrc');
+					$('img').attr('src', altSrc);
+					$('img').attr('altSrc', oldSrc);
+				})		
+				$('#append button').click(function(){
+					$('#rightbox h1').append(" " + i);
+					i++;
 				})
-					// ---- before --------// 
 				$('#before button').click(function(){
-					$('#rightbox h1').before(i + " ")
-					i++
-				})
-					// ---- html ----------//
-				$('#html button').click(function(){})
-					// ---- text ----------//
+					$('#rightbox h1').before(i + " ");
+					i++;
+				})					
 				$('#text button').click(function(){
-					$('#rightbox p').text('yeah')
+					$('#rightbox p').text('yeah');
 				})
-				$('#val button').click(function(){})
-				$('#toggle button').click(function(){})
-					// ---- hide ----------// 
+				$('#html button').click(function(){
+					alert('This button has not been configured');
+				})
+				$('#val button').click(function(){
+					alert('This button has not been configured');
+				})
+				$('#toggle button').click(function(){
+					$('#rightbox h1, p').toggle();
+				})
 				$('#hide button').click(function(){
-					$('#rightbox ').hide();
+					$('#rightbox').hide(1000);
 				})
-					// ---- show ----------//
 				$('#show button').click(function(){
-					$('#rightbox').show();
+					$('#rightbox').show(800);
 				})
-				$('#slideDown button').click(function(){})
-				$('#slideToggle button').click(function(){})
-				$('#slideUp button').click(function(){})
-				$('#fadeOut button').click(function(){})
-				$('#fadeIn button').click(function(){})
-				$('#focus button').click(function(){})
+				$('#slideUp button').click(function(){
+					$('#bottom_pannel').slideUp(1000);
+				})
+				$('#slideDown button').click(function(){
+					$('#bottom_pannel').slideDown(1000);
+				})
+				$('#slideToggle button').click(function(){
+					$('#rightbox').slideToggle(1000),
+					$('img').slideToggle(1000),
+					$('#bottom_pannel').slideToggle(1000)
+				})
+				$('#fade_Out button').click(function(){
+					$('img').fadeOut(1000);
+				})
+				$('#fade_In button').click(function(){
+					$('img').fadeIn(1000);
+				})
+				$('#focus button').click(function(){
+					name = prompt("Please enter your name")
+				})
 				$('#click button').click(function(){
-					alert('Thanks for viewing this webpage!')
+					alert('Thanks for viewing this webpage ' + name);
 				})
-
-
-
-
-
-
-
 				// add jquery above here
 			})
 	</script>
@@ -73,36 +79,41 @@
 <body>
 	<div id="container">
 		<div id="head">
-
+			<h1>JQUERY FUNCTIONS</h1>
 		</div>
 		
 		<div> <!-- start of left content -->
 			<div id="addClass" class="function">
-				<button>Add Class</button> 				
+				<button>Add Class</button> 
+				<p>This button adds a class of blue to 'hello world'</p>			
 			</div>
 			
 			<div id="after" class="function">
-				<button>After</button>							
+				<button>After</button>		
+				<p>This button adds 'boom' below 'hello world'</p>					
 			</div>
 			
 			<div id="append" class="function">	
 				<button>Append</button>
+				<p>This button appends numbers to 'hello world'</p>
 			</div>
 			
 			<div id="attr" class="function">	
 				<button>Attr</button>
+				<p>This button changes the image in the right column</p>
 			</div>
 			
 			<div id="before" class="function">	
-				<button>Before</button>			
+				<button>Before</button>		
+				<p>This button adds  numbers before 'hello world'</p>
 			</div>
 			
 			<div id="html" class="function">	
 				<button>Html</button>
 			</div>
-			
 			<div id="text" class="function">	
 				<button>Text</button>	
+				<p>This button changes some texts in the right box</p>
 			</div>
 			
 			<div id="val" class="function">	
@@ -111,47 +122,63 @@
 			
 			<div id="toggle" class="function">	
 				<button>Toggle</button>
+				<p>Click button to hide or show all text</p>
 			</div>
 			
 			<div id="hide" class="function">	
 				<button>Hide</button>
+				<p>This button hides the element above the image</p>
 			</div>
 			
 			<div id="show" class="function">	
 				<button>Show</button>
+				<p>This button shows the element above the image</p>
+			</div>
+			
+			<div id="fade_Out" class="function">	
+				<button>Fade Out</button>
+				<p>This button fades the image outt</p>
+			</div>
+			
+			<div id="fade_In" class="function">	
+				<button>Fade In</button>
+				<p>This button fades the image in</p>
+			</div>
+
+			<div id="slideUp" class="function">	
+				<button>Slide Up</button>
+				<p>This button slides an element up to the image</p>
 			</div>
 			
 			<div id="slideDown" class="function">	
 				<button>Slide Down</button>
+				<p>This button slides an element down from below the image</p> 
 			</div>
 			
 			<div id="slideToggle" class="function">	
 				<button>Slide Toggle</button>
-			</div>
-			
-			<div id="slideUp" class="function">	
-				<button>Slide Up</button>
-			</div>
-			
-			<div id="fadeUp" class="function">	
-				<button>Fade Out</button>
-			</div>
-			
-			<div id="fadeIn" class="function">	
-				<button>Fade In</button>
+				<p>This button hides / shows elements in right column</p>
 			</div>
 			
 			<div id="focus" class="function">	
 				<button>Focus</button>
+				<p>Click this button recieve a prompt for your name</p>
 			</div>
 			
 			<div id="click" class="function">	
-				<button>Click</button>
+				<button>Click</button> 
+				<p>Click this button to recieve an alert message</p>
 			</div>
 
 			<div id="rightbox">
 				<h1>hello world</h1>
 			</div>
+
+			<img src="img/programmer.jpg" altSrc="img/programmer_2.jpg" alt="image of programmer" width="487px" height="260px"></img>
+
+			<div id="bottom_pannel">
+			</div>
+
 		</div> <!-- End of left content -->
 	</div> <!-- End of container -->
 

@@ -17,33 +17,66 @@
 #head {
 	width: 960px; 
 	height: 100px; 
-	background-color: rgb(230,230,230);
+	background-color: rgb(200,200,200);
+	text-align: center;
+	overflow: auto;
 }
+	#head h1 {
+		margin-top: 30px; 
+		color: rgb(0,40,180);
+		font-family: sans-serif;
+		font-weight: bold;
+	}
+
 .function {
 	border-bottom: 1px solid black;
 	width: 430px; 
 	height: 80px;
 	background: linear-gradient(gray, lightgray, gray);
 }
+
 .function p {
-	font-size: 12px; 
-	color: white;
-	margin-left: 120px; 
+	font-size: 12px;
+	width: 300px;
+	margin-top: 30px; 
+	color: rgb(80,80,80);
+	font-weight: bold;
 }
 button {
 	width: 100px;
-	margin: 20px;
+	margin: 20px 5px 20px 20px;
 	padding: 7px;  
+}
+button, .function p {
+	display: inline-block;
+	vertical-align: top;
 }
 
 #rightbox {
-	height: 260px; 
-	width: 487px;  
+	height: 240px; 
+	width: 467px;  
 	background-color: gray; 
-	opacity: .6px; 
+	opacity: .9;
 	position: fixed;
-
 	top: 100px; 
 	left: 48%;
 	overflow: auto;
+	padding: 10px;
 }
+img {
+	position: fixed;
+	top: 360px; 
+	left: 48%;
+	visibility: ;
+	opacity: .8;
+}
+#bottom_pannel {
+	background: linear-gradient(gray, lightgray);
+	height: 100px;
+	width: 487px; 
+	position: fixed;
+	top: 620px; 
+	left: 48%;
+}
+
+
