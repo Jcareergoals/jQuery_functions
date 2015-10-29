@@ -1,0 +1,49 @@
+* {
+	margin: 0px; 
+	padding: 0px; 
+	font-family: "tahoma";
+}
+
+#container {
+	background-color: lightgray; 
+	width: 960px; 
+	overflow: auto; 
+	position: relative;
+	margin: 0px auto;  
+	border-radius: 5px; 
+
+}
+
+#head {
+	width: 960px; 
+	height: 100px; 
+	background-color: rgb(230,230,230);
+}
+.function {
+	border-bottom: 1px solid black;
+	width: 430px; 
+	height: 80px;
+	background: linear-gradient(gray, lightgray, gray);
+}
+.function p {
+	font-size: 12px; 
+	color: white;
+	margin-left: 120px; 
+}
+button {
+	width: 100px;
+	margin: 20px;
+	padding: 7px;  
+}
+
+#rightbox {
+	height: 260px; 
+	width: 487px;  
+	background-color: gray; 
+	opacity: .6px; 
+	position: fixed;
+
+	top: 100px; 
+	left: 48%;
+	overflow: auto;
+}
