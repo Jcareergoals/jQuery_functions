@@ -38,7 +38,8 @@
 					alert('This button has not been configured');
 				})
 				$('#val button').click(function(){
-					alert('This button has not been configured');
+					// alert('This button has not been configured');
+					$("#rightbox h1").text($("#val button").val());
 				})
 				$('#toggle button').click(function(){
 					$('#rightbox h1, p').toggle();
@@ -117,7 +118,8 @@
 			</div>
 			
 			<div id="val" class="function">	
-				<button>Val</button>
+				<button value="Button value">Val</button>
+				<p>This button changes text in the right box h1</p>
 			</div>
 			
 			<div id="toggle" class="function">	
